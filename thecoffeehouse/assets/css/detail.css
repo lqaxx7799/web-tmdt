@@ -106,7 +106,7 @@ main {
   border: 1px solid #aaa;
   cursor: pointer;
   display: inline-block;
-  margin-right: 6px;
+  margin-right: 12px;
   margin-bottom: 12px;
 }
 
@@ -160,6 +160,10 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 24px;
+}
+
+.product-suggestion__item {
+  width: 130px;
 }
 
 .product-suggestion__image {
