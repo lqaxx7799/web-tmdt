@@ -67,16 +67,163 @@ body {
 }
 
 main {
-  margin-bottom: 48px;
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
 }
 
-.hero-wrapper {
-  margin-top: 96px;
+.breadcrumb {
+  margin: auto;
+}
+
+.breadcrumb > div + div:before {
+  content: ">";
+  padding: 0 5px;
+  color: #ccc;
+}
+
+.breadcrumb > div:not(:last-of-type) {
+  font-weight: 600;
+}
+
+.breadcrumb > div:last-of-type {
+  font-weight: 600;
+  color: #666;
+}
+
+.product-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.product__info-column {
+  flex: 1 1 0px;
+}
+
+.product__main-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.product-detail__wrapper {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px;
+}
+
+.product__title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 24px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.product__price {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 8px;
+  color: #cc9933;
+  margin-bottom: 12px;
+}
+
+.order-button {
+  display: block;
+  background-color: #cc9933;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.product__description {
+  white-space: pre-line;
+  color: #444;
+  margin-top: 12px;
   margin-bottom: 64px;
 }
 
-.hero-wrapper img {
+.product__warning {
+  font-size: 12px;
+  color: #444;
+}
+
+.divider {
+  height: 1px;
   width: 100%;
+  border-bottom: 1px solid #ddd;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.divider--white {
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid white;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.product-suggestion__wrapper {
+  margin-top: 32px;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0;
+}
+
+.product-suggestion__title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.product-suggestion__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+
+.menu-group-title {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.menu-item__image {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  width: 100%;
+}
+
+.menu-item__info {
+  margin-top: 6px;
+  text-align: center;
+}
+
+.menu-item__name a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu-item__price {
+  color: #cc9933;
 }
 
 footer {

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="assets/css/bootstrap-utilities.min.css">
-  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/detail.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/jquery-3.6.4.min.js"></script>
@@ -38,7 +38,56 @@
   </div>
 
   <main>
+    <div class="breadcrumb">
+      <div>Menu</div>
+      <div>Sản phẩm hot trang chủ</div>
+      <div id="breadcrumbCurrent"></div>
+    </div>
+    <div class="container">
+      <div class="product-wrapper">
+        <div class="product__info-column">
+          <img class="product__main-image" src="assets/images/products/p1.jpg" id="productImage" alt=""/>
+        </div>
+        <div class="product__info-column product-detail__wrapper">
+          <img src="assets/images/logo-gray.png" alt="" />
+          <div class="product__title" id="productTitle">Boong hoa</div>
+          <div class="product__price" id="productPrice">100000 d</div>
+          <div class="order-button">Chọn mua</div>
+          <div class="product__description" id="productDescription">
+            Bình hoa chân cao Explorer nhập khẩu Ecuador, thảo đường hoàng đế, Đào đông đỏ, ly lửa mix cùng hoa lá phụ nhập khẩu
   
+  – Medium size: 8.000.000 VNĐ
+  
+  – Big size: 12.500.000 VNĐ
+  
+  – Super size: 16.000.000 VNĐ
+          </div>
+          <div class="spacer"></div>
+          <div class="product__warning">
+            Lưu ý: Sản phẩm hoa mẫu chỉ mang tính chất tham khảo. Bởi vì: một số loại hoa trong mẫu theo mùa sẽ không có hoặc chất lượng không đảm bảo, do đó chúng tôi sẽ dùng các loại hoa khác thay thế. Nhưng Swan Florist đảm bảo định lượng, tone màu, kiểu dáng cũng như chất lượng hoa tươi đẹp và đầy đặn nhất. Bạn sẽ nhận được ảnh hoàn thiện trước khi chúng tôi giao hoa.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-suggestion__wrapper">
+      <div class="product-suggestion__title">Có thể bạn quan tâm</div>
+      <div class="container">
+        <div class="product-suggestion__list" id="productSuggestions">
+          <div class="menu-item">
+            <a href="detail.html?id=1">
+              <img src="assets/images/products/p1.jpg" alt="" class="menu-item__image" />
+            </a>
+            <div class="menu-item__info">  
+              <div class="menu-item__name">
+                <a href="detail.html?id=1">CloudFee Hạnh nhân nướng</a>
+              </div>
+              <div class="menu-item__price">49.000 đ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
   
   <footer>
@@ -90,5 +139,7 @@
       © 2022 Bản quyền thuộc về Swan Florist. All Right Rerserved
     </div>
   </footer>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/detail.js"></script>
 </body>
 </html>
