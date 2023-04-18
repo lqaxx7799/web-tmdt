@@ -16,17 +16,25 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('productDescription').innerHTML = product.description;
   document.getElementById('productImage').src = product.image;
 
-  const sizesTemplate = product.sizes.reduce((res, val) => {
-    const sizeItemTemplate = `<div class="option__item">${val}</div>`;
-    return res + sizeItemTemplate;
-  }, '');
-  document.getElementById('sizeOptions').innerHTML = sizesTemplate;
-
-  const toppingsTemplate = product.toppings.reduce((res, val) => {
-    const toppingItemTemplate = `<div class="option__item">${val}</div>`;
-    return res + toppingItemTemplate;
-  }, '');
-  document.getElementById('toppingOptions').innerHTML = toppingsTemplate;
+  if (product.sizes) {
+    const sizesTemplate = product.sizes.reduce((res, val) => {
+      const sizeItemTemplate = `<div class="option__item">${val}</div>`;
+      return res + sizeItemTemplate;
+    }, '');
+    document.getElementById('sizeOptions').innerHTML = sizesTemplate;  
+  } else {
+    document.getElementById('sizeOptionsWrapper').style.display = 'none';  
+  }
+  
+  if (product.toppings) {
+    const toppingsTemplate = product.toppings.reduce((res, val) => {
+      const toppingItemTemplate = `<div class="option__item">${val}</div>`;
+      return res + toppingItemTemplate;
+    }, '');
+    document.getElementById('toppingOptions').innerHTML = toppingsTemplate;
+  } else {
+    document.getElementById('toppingOptionsWrapper').style.display = 'none';  
+  }
 
   const suggestionsTemplate = product.suggestions.reduce((res, val) => {
     const product = products.find(item => item.id === val);

@@ -101,6 +101,7 @@ main {
 
 .menu-item__name a:hover {
   color: var(--primary-color);
+  transition: color 200ms ease-in-out;
 }
 
 .menu-item__price {
