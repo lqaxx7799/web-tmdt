@@ -55,7 +55,16 @@ main {
 
 .hero-item {
   width: 100%;
-} 
+}
+
+.hero-slider .slick-prev {
+  left: 8px;
+  z-index: 1;
+}
+
+.hero-slider .slick-next {
+  right: 8px;
+}
 
 .home-menu {
   margin-top: 36px;

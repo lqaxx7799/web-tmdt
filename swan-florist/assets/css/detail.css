@@ -120,12 +120,13 @@ main {
   font-weight: 600;
   margin-top: 24px;
   color: #666;
+  text-align: center;
   text-transform: uppercase;
 }
 
 .product__price {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 400;
   margin-top: 8px;
   color: #cc9933;
   margin-bottom: 12px;
@@ -147,8 +148,10 @@ main {
 .product__description {
   white-space: pre-line;
   color: #444;
-  margin-top: 12px;
+  margin-top: 24px;
   margin-bottom: 64px;
+  align-self: flex-start;
+  font-size: 12px;
 }
 
 .product__warning {
