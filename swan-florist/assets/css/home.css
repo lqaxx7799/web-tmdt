@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #EA8025;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
