@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #aaa;
+  background-color: #ffffff;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 72px;
+}
+
+.logo {
+  width: auto;
+}
+
+.navlist {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.navitem {
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 200ms ease-in-out;
+  color: #666;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.navitem::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #666;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.navitem:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.spacer {
+  flex-grow: 1;
+}
+
+main {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+}
+
+.breadcrumb {
+  margin: auto;
+}
+
+.breadcrumb > div + div:before {
+  content: ">";
+  padding: 0 5px;
+  color: #ccc;
+}
+
+.breadcrumb > div:not(:last-of-type) {
+  font-weight: 600;
+}
+
+.breadcrumb > div:last-of-type {
+  font-weight: 600;
+  color: #666;
+}
+
+.product-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.product__info-column {
+  flex: 1 1 0px;
+}
+
+.product__main-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.product-detail__wrapper {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px;
+}
+
+.product__title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 24px;
+  color: #666;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.product__price {
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 8px;
+  color: #cc9933;
+  margin-bottom: 12px;
+}
+
+.order-button {
+  display: block;
+  background-color: #cc9933;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+}
+
+.product__description {
+  white-space: pre-line;
+  color: #444;
+  margin-top: 24px;
+  margin-bottom: 64px;
+  align-self: flex-start;
+  font-size: 12px;
+}
+
+.product__warning {
+  font-size: 12px;
+  color: #444;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.divider--white {
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid white;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.product-suggestion__wrapper {
+  margin-top: 32px;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 0;
+}
+
+.product-suggestion__title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.product-suggestion__list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+
+.menu-group-title {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.menu-item__image {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  width: 100%;
+}
+
+.menu-item__info {
+  margin-top: 6px;
+  text-align: center;
+}
+
+.menu-item__name a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu-item__price {
+  color: #cc9933;
+}
+
+footer {
+  background-color: #333333;
+  color: white;
+  font-size: 12px;
+  padding-top: 36px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.footer-grid__item-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.footer-grid__item-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-grid__item-list li {
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+.footer__info {
+  white-space: pre-line;
+}
+
+.footer-grid__item-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 6px;
+}
+
+.footer-grid__item-info i {
+  padding-top: 4px;
+  padding-right: 8px;
+}
+
+.copyright-wrapper {
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: #aaa;
+  padding: 16px 0;
+  font-size: 14px;
+  margin-top: 12px;
+}

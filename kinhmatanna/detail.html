@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kính mắt Anna</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-utilities.min.css">
+  <link rel="stylesheet" href="assets/css/detail.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="container">
+      <div>
+        <a href="home.html">
+          <img src="assets/images/logo.png" alt="" class="logo"/>
+        </a>
+      </div>
+      <div class="navlist">
+        <div class="navitem">Trang chủ</div>
+        <div class="navitem">Giới thiệu</div>
+        <div class="navitem">Sản phẩm</div>
+        <div class="navitem">Sự kiện</div>
+        <div class="navitem">Chính sách</div>
+        <div class="navitem">Liên hệ</div>
+      </div>
+      <div class="spacer"></div>
+      <div>
+        <i class="fa-solid fa-search fs-4 pe-4"></i>
+        <i class="fa-solid fa-cart-shopping fs-4"></i>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="breadcrumb">
+      <div>Menu</div>
+      <div>Sản phẩm hot trang chủ</div>
+      <div id="breadcrumbCurrent"></div>
+    </div>
+    <div class="container">
+      <div class="product-wrapper">
+        <div class="product__info-column">
+          <img class="product__main-image" id="productImage" alt=""/>
+        </div>
+        <div class="product__info-column product-detail__wrapper">
+          <img src="assets/images/logo-gray.png" alt="" />
+          <div class="product__title" id="productTitle"></div>
+          <div class="product__price" id="productPrice"></div>
+          <div class="order-button">Chọn mua</div>
+          <div class="product__description" id="productDescription"></div>
+          <div class="spacer"></div>
+          <div class="product__warning">
+            Lưu ý: Sản phẩm hoa mẫu chỉ mang tính chất tham khảo. Bởi vì: một số loại hoa trong mẫu theo mùa sẽ không có hoặc chất lượng không đảm bảo, do đó chúng tôi sẽ dùng các loại hoa khác thay thế. Nhưng Swan Florist đảm bảo định lượng, tone màu, kiểu dáng cũng như chất lượng hoa tươi đẹp và đầy đặn nhất. Bạn sẽ nhận được ảnh hoàn thiện trước khi chúng tôi giao hoa.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-suggestion__wrapper">
+      <div class="product-suggestion__title">Có thể bạn quan tâm</div>
+      <div class="container">
+        <div class="product-suggestion__list" id="productSuggestions">
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-grid__item">
+          <img src="assets/images/logo-inverted.png"/>
+          <div class="footer-grid__item-title">Tiệm hoa tươi Swan Florist</div>
+          <div class="footer-grid__item-info">
+            <i class="fa-solid fa-location-arrow"></i>
+            <div>Số 20 Ngõ 30. Nguyễn Thị Định, Trung Hòa, Cầu Giấy, Hà Nội.</div>
+          </div>
+          <div class="footer-grid__item-info">
+            <i class="fa-solid fa-phone"></i>
+            <div>Hotline: 09230 55555</div>
+          </div>
+          <div class="footer-grid__item-info">
+            <i class="fa-solid fa-envelope"></i>
+            <div>Email: swanflorist@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="footer-grid__item">
+          <div class="footer-grid__item-title">Quy định và bảo mật</div>
+          <ul class="footer-grid__item-list">
+            <li>Chính sách và quy định chung</li>
+            <li>Bảo mật thông tin</li>
+            <li>Tin tức</li>
+            <li>Liên hệ</li>
+          </ul>
+        </div>
+
+        <div class="footer-grid__item">
+          <div class="footer-grid__item-title">Chính sách mua hàng</div>
+          <ul class="footer-grid__item-list">
+            <li>Đổi trả hàng và hoàn tiền</li>
+            <li>Vận chuyển / Giao nhận</li>
+            <li>Quy định và hình thức thanh toán</li>
+          </ul>
+        </div>
+
+        <div class="footer-grid__item">
+          <div class="footer-grid__item-title">Mạng xã hội</div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright-wrapper">
+      © 2022 Bản quyền thuộc về Swan Florist. All Right Rerserved
+    </div>
+  </footer>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/detail.js"></script>
+</body>
+</html>
