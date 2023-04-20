@@ -59,7 +59,6 @@ body {
 
 main {
   margin-top: 90px;
-  margin-bottom: 48px;
 }
 
 .top-banner {
@@ -200,6 +199,10 @@ main {
 
 .product-item__price {
   font-size: 12px;
+}
+
+.product-item__title {
+  text-align: center;
 }
 
 .home-menu {

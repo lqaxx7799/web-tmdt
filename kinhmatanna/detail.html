@@ -18,29 +18,31 @@
     <div class="container">
       <div>
         <a href="home.html">
-          <img src="assets/images/logo.png" alt="" class="logo"/>
+          <img src="assets/images/logo.svg" alt="" class="logo"/>
         </a>
       </div>
+      <div class="spacer"></div>
       <div class="navlist">
         <div class="navitem">Trang chủ</div>
-        <div class="navitem">Giới thiệu</div>
-        <div class="navitem">Sản phẩm</div>
-        <div class="navitem">Sự kiện</div>
-        <div class="navitem">Chính sách</div>
-        <div class="navitem">Liên hệ</div>
+        <div class="navitem">Sản phẩm</div>        
+        <div class="navitem">Về Anna</div>
+        <div class="navitem">Blog</div>
+        <div class="navitem">Order Checking</div>
+        <div class="navitem">Store</div>
       </div>
       <div class="spacer"></div>
       <div>
         <i class="fa-solid fa-search fs-4 pe-4"></i>
-        <i class="fa-solid fa-cart-shopping fs-4"></i>
+        <i class="fa-regular fa-circle-user fs-4 pe-4"></i>
+        <i class="fa-sharp fa-solid fa-bag-shopping fs-4"></i>
       </div>
     </div>
   </div>
 
   <main>
-    <div class="breadcrumb">
-      <div>Menu</div>
-      <div>Sản phẩm hot trang chủ</div>
+    <div class="container breadcrumb">
+      <div>Trang chủ</div>
+      <div>Sản phẩm</div>
       <div id="breadcrumbCurrent"></div>
     </div>
     <div class="container">
@@ -49,77 +51,128 @@
           <img class="product__main-image" id="productImage" alt=""/>
         </div>
         <div class="product__info-column product-detail__wrapper">
-          <img src="assets/images/logo-gray.png" alt="" />
           <div class="product__title" id="productTitle"></div>
-          <div class="product__price" id="productPrice"></div>
-          <div class="order-button">Chọn mua</div>
+          <div class="product__price-wrapper">
+            <div class="product__price" id="productPrice"></div>
+            <div class="product__old-price" id="productOldPrice"></div>
+          </div>
           <div class="product__description" id="productDescription"></div>
-          <div class="spacer"></div>
-          <div class="product__warning">
-            Lưu ý: Sản phẩm hoa mẫu chỉ mang tính chất tham khảo. Bởi vì: một số loại hoa trong mẫu theo mùa sẽ không có hoặc chất lượng không đảm bảo, do đó chúng tôi sẽ dùng các loại hoa khác thay thế. Nhưng Swan Florist đảm bảo định lượng, tone màu, kiểu dáng cũng như chất lượng hoa tươi đẹp và đầy đặn nhất. Bạn sẽ nhận được ảnh hoàn thiện trước khi chúng tôi giao hoa.
+          <div class="product__delivery">
+            <i class="fa-solid fa-truck-fast"></i>
+            Miễn phí giao hàng từ 500k ( vận chuyển 3 - 5 ngày )
+          </div>
+          <div class="product__quantity"></div>
+          <div class="product__action">
+            <button class="button-gray"><i class="fa-regular fa-heart"></i></button>
+            <button class="button-black">Thêm Vào Giỏ Hàng</button>
+          </div>
+          <div class="divider"></div>
+          <div class="delivery-info-grid">
+            <div class="delivery-info-item">
+              <div class="delivery-info-item__title">
+                <i class="fa-solid fa-box-archive"></i>
+                <div>Bảo hành trọn đời</div>
+              </div>
+              <div class="delivery-info-item__description">
+                Bảo hành ốc vít rơi ra, gọng lệch, gọng kênh vênh, lỏng chật, rơi ve đệm mũi trọn đời.
+              </div>
+            </div>
+            <div class="delivery-info-item">
+              <div class="delivery-info-item__title">
+                <i class="fa-solid fa-person"></i>
+                <div>Giao hàng tận nơi</div>
+              </div>
+              <div class="delivery-info-item__description">
+                Giao hàng tận nơi, được kiểm tra hàng trước khi thanh toán
+              </div>
+            </div>
+            <div class="delivery-info-item">
+              <div class="delivery-info-item__title">
+                <i class="fa-solid fa-box-open"></i>
+                <div>Đổi trả dễ dàng</div>
+              </div>
+              <div class="delivery-info-item__description">
+                Bảo hành 1 đổi 1 khi có lỗi của nhà sản xuất, lỗi do đo mắt sai (trong 10 ngày đầu), hỗ trợ giảm 50% nếu đổi gọng mới
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="product-suggestion__wrapper">
-      <div class="product-suggestion__title">Có thể bạn quan tâm</div>
-      <div class="container">
-        <div class="product-suggestion__list" id="productSuggestions">
-        </div>
+    <div class="product-suggestion__wrapper container">
+      <div class="product-suggestion__title">Sản phẩm nổi bật</div>
+      <div class="product-suggestion__list" id="productSuggestions">
       </div>
     </div>
   </main>
   
   <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-grid__item">
-          <img src="assets/images/logo-inverted.png"/>
-          <div class="footer-grid__item-title">Tiệm hoa tươi Swan Florist</div>
-          <div class="footer-grid__item-info">
-            <i class="fa-solid fa-location-arrow"></i>
-            <div>Số 20 Ngõ 30. Nguyễn Thị Định, Trung Hòa, Cầu Giấy, Hà Nội.</div>
-          </div>
-          <div class="footer-grid__item-info">
-            <i class="fa-solid fa-phone"></i>
-            <div>Hotline: 09230 55555</div>
-          </div>
-          <div class="footer-grid__item-info">
-            <i class="fa-solid fa-envelope"></i>
-            <div>Email: swanflorist@gmail.com</div>
-          </div>
+    <div class="footer-info">
+      <div class="container">
+        <div><img alt="" src="assets/images/logo-text.svg"/></div>
+        <div class="spacer"></div>
+        <div class="footer-info-item">
+          <i class="fa-solid fa-shield"></i>
+          <div>Chính sách bảo hành</div>
         </div>
-
-        <div class="footer-grid__item">
-          <div class="footer-grid__item-title">Quy định và bảo mật</div>
-          <ul class="footer-grid__item-list">
-            <li>Chính sách và quy định chung</li>
-            <li>Bảo mật thông tin</li>
-            <li>Tin tức</li>
-            <li>Liên hệ</li>
-          </ul>
+        <div class="footer-info-item">
+          <i class="fa-solid fa-eye"></i>
+          <div>Khám mắt miễn phí</div>
         </div>
-
-        <div class="footer-grid__item">
-          <div class="footer-grid__item-title">Chính sách mua hàng</div>
-          <ul class="footer-grid__item-list">
-            <li>Đổi trả hàng và hoàn tiền</li>
-            <li>Vận chuyển / Giao nhận</li>
-            <li>Quy định và hình thức thanh toán</li>
-          </ul>
+        <div class="footer-info-item">
+          <i class="fa-solid fa-rotate"></i>
+          <div>Thu cũ đổi mới</div>
         </div>
-
-        <div class="footer-grid__item">
-          <div class="footer-grid__item-title">Mạng xã hội</div>
-          <div></div>
+        <div class="footer-info-item">
+          <i class="fa-solid fa-brush"></i>
+          <div>Vệ sinh & bảo quản kính mắt</div>
         </div>
       </div>
     </div>
-    <div class="copyright-wrapper">
-      © 2022 Bản quyền thuộc về Swan Florist. All Right Rerserved
+
+    <div class="footer-grid container"> 
+      <div class="footer-grid__item">
+        <div class="footer-grid__item-title">Tất cả sản phẩm</div>
+        <ul class="footer-grid__item-list">
+          <li>Gọng kính</li>
+          <li>Tròng kính</li>
+          <li>Kính râm</li>
+          <li>Phụ kiện</li>
+        </ul>
+      </div>
+
+      <div class="footer-grid__item">
+        <div class="footer-grid__item-title">Chính sách mua hàng</div>
+        <ul class="footer-grid__item-list">
+          <li>Hình thức thanh toán</li>
+          <li>Chính sách giao hàng</li>
+          <li>Chính sách bảo hành</li>
+        </ul>
+      </div>
+
+      <div class="footer-grid__item">
+        <div class="footer-grid__item-title">Thông tin liên hệ</div>
+        <div>
+          Điện thoại: 1900 0359
+        </div>
+        <div>
+          Email: marketing@kinhmatanna.com
+        </div>
+        <div>
+          Website: kinhmatanna.com
+        </div>
+      </div>
+
+      <div class="footer-grid__item">
+        <div class="footer-grid__item-title">Về Anna</div>
+        <div>
+          Mã số thuế: 0108195925
+        </div>
+      </div>
     </div>
   </footer>
+
   <script src="assets/js/products.js"></script>
   <script src="assets/js/detail.js"></script>
 </body>
